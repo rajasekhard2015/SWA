@@ -27,33 +27,27 @@ namespace SecureWebAuthentication.Pages
 
             var doc= LoadHtml(content);
 
-            return Page();
+            return new ContentResult
+            {
+                ContentType = "text/html",
+                Content = doc.DocumentNode.OuterHtml
+            };
         }
 
         private static HtmlDocument LoadHtml(string html)
         {
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(html);
-            string s = "";
-
+        
             HtmlNode docNode = doc.DocumentNode;
  
-           var node=  doc.DocumentNode.SelectSingleNode("//input[@name='Input.Email']");
+            var Emailnode=  doc.DocumentNode.SelectSingleNode("//input[@name='Input.Email']");
 
-            node.SetAttributeValue("value", "rajasekhar.d@ensurity.com");
+            Emailnode.SetAttributeValue("value", "rajasekhar.d@ensurity.com");
 
-            //HtmlNodeCollection nodes = docNode.SelectNodes("//input"); //SelectNodes takes a XPath expression
-            //foreach (HtmlNode node in nodes)
-            //{
-            //    var attributes = node.GetAttributes();
-            //    foreach (var item in attributes)
-            //    {
-            //        Console.WriteLine("*****************");
-            //        Console.WriteLine(item.Name);
-            //        Console.WriteLine("*****************");
+            var Passwordnode = doc.DocumentNode.SelectSingleNode("//input[@name='Input.Password']");
 
-            //    }
-            //}
+            Passwordnode.SetAttributeValue("value", "Unik@123");
 
             return doc;
         }
