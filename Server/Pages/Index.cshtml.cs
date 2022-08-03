@@ -27,6 +27,8 @@ namespace SecureWebAuthentication.Pages
 
             var doc= LoadHtml(content);
 
+
+
             return new ContentResult
             {
                 ContentType = "text/html",
@@ -37,6 +39,7 @@ namespace SecureWebAuthentication.Pages
         private static HtmlDocument LoadHtml(string html)
         {
             HtmlDocument doc = new HtmlDocument();
+          
             doc.LoadHtml(html);
         
             HtmlNode docNode = doc.DocumentNode;
