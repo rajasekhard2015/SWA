@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureWebAuthentication", "SecureWebAuthentication.csproj", "{233AA41A-0058-4570-9789-8BB2C4655D73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureWebAuthentication", ".\Server\SecureWebAuthentication.csproj", "{233AA41A-0058-4570-9789-8BB2C4655D73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWA-Client", "..\SWA-Client\SWA-Client.csproj", "{1EEFF9CB-1F4B-49BE-A489-C390CCD01E27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWA-Client", ".\Client\SWA-Client.csproj", "{1EEFF9CB-1F4B-49BE-A489-C390CCD01E27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
