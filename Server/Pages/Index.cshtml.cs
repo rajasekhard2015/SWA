@@ -21,17 +21,28 @@ namespace SecureWebAuthentication.Pages
 
         public async Task<IActionResult> OnGetAsync()
         {
-            using var client = new HttpClient();
-         
-            var content = await client.GetStringAsync("http://localhost:57666/Identity/Account/Login");
 
-            var doc= LoadHtml(content);
 
-            return new ContentResult
-            {
-                ContentType = "text/html",
-                Content = doc.DocumentNode.OuterHtml
-            };
+
+
+            //using var client = new HttpClient();
+
+            //string loginUrl = "http://localhost:57666/Identity/Account/Login";
+            //var content = await client.GetStringAsync(loginUrl);
+
+            //var doc= LoadHtml(content);
+
+            //Response.Redirect(loginUrl);
+
+
+
+
+
+
+
+
+            return Page();
+
         }
 
         private static HtmlDocument LoadHtml(string html)
