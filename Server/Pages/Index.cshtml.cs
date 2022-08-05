@@ -48,6 +48,7 @@ namespace SecureWebAuthentication.Pages
         private static HtmlDocument LoadHtml(string html)
         {
             HtmlDocument doc = new HtmlDocument();
+          
             doc.LoadHtml(html);
         
             HtmlNode docNode = doc.DocumentNode;
